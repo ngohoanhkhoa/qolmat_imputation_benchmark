@@ -1,0 +1,44 @@
+# PACKAGE
+
+[tool.poetry]
+package-mode = false
+name = "imputation_benchmark"
+version = "0.1.1"
+description = "Imputation benchmark"
+authors = [
+    "Anh Khoa NGO HO <anh-khoa.ngo-ho@capgemini.com>",
+]
+license = "BSD-3-Clause"
+readme = "README.md"
+keywords = ["imputation"]
+classifiers = [
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved",
+    "Topic :: Software Development",
+    "Topic :: Scientific/Engineering",
+    "Operating System :: Microsoft :: Windows",
+    "Operating System :: POSIX",
+    "Operating System :: Unix",
+    "Operating System :: MacOS",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+]
+
+# DEPENDENCIES
+
+[tool.poetry.dependencies]
+python = ">=3.10,<3.12"
+numpy = "1.24.4"
+pandas = "2.0.1"
+scipy = "1.10.1"
+scikit-learn = "1.3.2"
+plotly = "*"
+scikit_posthocs = "*"
+streamlit = "1.38.0"
+altair = "4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
