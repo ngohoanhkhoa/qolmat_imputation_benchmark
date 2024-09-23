@@ -4,6 +4,16 @@ import numpy as np
 from scipy import stats
 import imputer_predictor as imppred
 
+st.set_page_config(
+    page_title="Imputation Benchmark for Tabular Data",
+    page_icon="🧊",
+    layout="wide",
+    initial_sidebar_state="expanded",
+    menu_items={
+        'About': 'https://github.com/scikit-learn-contrib/qolmat',
+    }
+)
+
 st.title("Imputation Benchmark for Tabular Data")
 
 results_plot = pd.read_pickle("benchmark_plot_app.pkl")
@@ -115,7 +125,7 @@ def get_title_values(cols_grouped, cols_full=cols_plot_name.keys()):
 st.header("A. Benchmark Configuration")
 st.markdown(
     """
-- **Imputers**:7 methods (I = 7)
+- **Imputers**: 7 imputation methods implemented in [Qolmat](https://github.com/scikit-learn-contrib/qolmat) (I = 7).
     - Conditional Imputation: RPCA, EM, MICE, KNN, Diffusion
     - Constant/simple Imputation: Median, Shuffle
 - **Regression Predictor**: Ridge, HistGradientBoostingRegressor, XGBRegressor
